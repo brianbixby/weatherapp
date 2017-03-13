@@ -1,11 +1,10 @@
 require('dotenv').config();
-// dependencies
-require('dotenv').config();
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 var request = require('request');
 var app = express();
+var key = process.env.API_KEY;
 
 //Decode POST data in JSON and URL encoded formats
 app.use(bodyParser.json());
