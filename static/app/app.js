@@ -11,6 +11,10 @@ angular.module('App', ['ui.router'])
       .state('homeState', {
         url: '/',
         component: 'homeComp'
+      })
+      .state('testState', {
+        url: '/test',
+        component: 'testComp'
       });
       //Removes # symbol for our routes
       $locationProvider.html5Mode(true);
