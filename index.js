@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 //Observe server activity
 app.use(require('morgan')('dev'));
 
-// app.use('/api/results', require('./controllers/results'));
+app.use('/api/weather', require('./controllers/results'));
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'static/index.html'));
