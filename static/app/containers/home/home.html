@@ -1,5 +1,13 @@
 <div class="container">
   <h1>Home </h1>
+  <div ng-repeat="result in homeComp.txtForecast">
+    <p>Day: {{result.title}}</p>
+    <p> Forecast: {{result.fcttext}}</p>
+    <p><img src="{{result.icon_url}}"> {{result.icon}}</p>
+    <!-- <p>{{result.period}}</p>
+    <p>{{result.pop}}</p> -->
+        <!-- <p>{{result.fcttext_metric}}</p> -->
+  </div>
   <div>
     <P>UV rays: {{homeComp.weather.UV}}</P>
     <P>Celsius: {{homeComp.weather.dewpoint_c}}</P>
@@ -50,5 +58,30 @@
   <hr>
   <div>
     {{homeComp.forecast}}
+
+  <hr />
+  <div ng-repeat="day in homeComp.simpleforecast">
+    <p>pretty date: {{day.date.pretty}}</p>
+    <p>avehumidity: {{day.avehumidity}}</p>
+    <p>avewind.degrees: {{day.avewind.degrees}}</p>
+    <p>avewind.dir: {{day.avewind.dir}}</p>
+    <p>avewind.kph: {{day.avewind.kph}}</p>
+    <p>avewind.mph: {{day.avewind.mph}}</p>
+    <p>conditions: {{day.conditions}}</p>
+    <p>high.celsius: {{day.high.celsius}}</p>
+    <p>high.fahrenheit: {{day.high.fahrenheit}}</p>
+    <p>icon: {{day.icon}}</p>
+    <img src={{day.icon_url}} />
+    <p>low.celsius: {{day.low.celsius}}</p>
+    <p>low.fahrenheit: {{day.low.fahrenheit}}</p>
+    <p>maxhumidity: {{day.maxhumidity}}</p>
+    <p>maxwind degrees: {{day.maxwind.degrees}}</p>
+    <p>maxwind dir: {{day.maxwind.dir}}</p>
+    <p>maxwind kph: {{day.maxwind.kph}}</p>
+    <p>maxwind mph: {{day.maxwind.mph}}</p>
+    <p>minhumidity: {{day.minhumidity}}</p>
+    <p>snow_allday cm: {{day.snow_allday.cm}}</p>
+    <p>snow_allday in: {{day.snow_allday.in}}</p>
+
   </div>
 </div>

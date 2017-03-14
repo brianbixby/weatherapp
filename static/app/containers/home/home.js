@@ -17,10 +17,11 @@ function HomeCompCtrl($http, $state, $location, Weather) {
   }
   homeComp.getForecast = function() {
     Weather.forecast().then(function(response) {
-      homeComp.forecast = response.data.forecast;
       var fourDayInfo = response.data.forecast.simpleforecast.forecastday;
       homeComp.getChartData(fourDayInfo)
-      console.log(response);
+      homeComp.simpleforecast = response.data.forecast.simpleforecast.forecastday;
+      console.log(response.data.forecast);
+      homeComp.txtForecast = response.data.forecast.txt_forecast.forecastday;
     });
   }
 
@@ -36,10 +37,10 @@ function HomeCompCtrl($http, $state, $location, Weather) {
       chartMaxF.push(array[i]['high']['fahrenheit']);
       chartMaxC.push(array[i]['high']['celsius']);
     }
-    console.log("The 4-day lows (f): ", chartMinF);
-    console.log("The 4-day lows (c): ", chartMinC);
-    console.log("The 4-day highs (f): ", chartMaxF);
-    console.log("The 4-day highs (c): ", chartMaxC);
+    console.log("The 10-day lows (f): ", chartMinF);
+    console.log("The 10-day lows (c): ", chartMinC);
+    console.log("The 10-day highs (f): ", chartMaxF);
+    console.log("The 10-day highs (c): ", chartMaxC);
   }
 
   homeComp.getForecast();
