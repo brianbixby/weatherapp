@@ -1,5 +1,13 @@
 <div class="container">
   <h1>Home </h1>
+  <div ng-repeat="result in homeComp.txtForecast">
+    <p>Day: {{result.title}}</p>
+    <p> Forecast: {{result.fcttext}}</p>
+    <p><img src="{{result.icon_url}}"> {{result.icon}}</p>
+    <!-- <p>{{result.period}}</p>
+    <p>{{result.pop}}</p> -->
+        <!-- <p>{{result.fcttext_metric}}</p> -->
+  </div>
   <div>
     <P>UV rays: {{homeComp.weather.UV}}</P>
     <P>Celsius: {{homeComp.weather.dewpoint_c}}</P>

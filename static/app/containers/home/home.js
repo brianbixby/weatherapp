@@ -18,6 +18,7 @@ function HomeCompCtrl($http, $state, $location, Weather) {
   homeComp.getForecast = function() {
     Weather.forecast().then(function(response) {
       homeComp.forecast = response.data.forecast;
+      homeComp.txtForecast = response.data.forecast.txt_forecast.forecastday;
       console.log(response);
     });
   }
