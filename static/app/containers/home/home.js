@@ -18,9 +18,30 @@ function HomeCompCtrl($http, $state, $location, Weather) {
   homeComp.getForecast = function() {
     Weather.forecast().then(function(response) {
       homeComp.forecast = response.data.forecast;
+      var fourDayInfo = response.data.forecast.simpleforecast.forecastday;
+      homeComp.getChartData(fourDayInfo)
       console.log(response);
     });
   }
+
+  //Get 4-day forcast highs and lows for chart
+  homeComp.getChartData = function(array) {
+    var chartMinF = [];
+    var chartMinC = [];
+    var chartMaxF = [];
+    var chartMaxC = [];
+    for(var i=0; i<array.length; i++ ) {
+      chartMinF.push(array[i]['low']['fahrenheit']);
+      chartMinC.push(array[i]['low']['celsius']);
+      chartMaxF.push(array[i]['high']['fahrenheit']);
+      chartMaxC.push(array[i]['high']['celsius']);
+    }
+    console.log("The 4-day lows (f): ", chartMinF);
+    console.log("The 4-day lows (c): ", chartMinC);
+    console.log("The 4-day highs (f): ", chartMaxF);
+    console.log("The 4-day highs (c): ", chartMaxC);
+  }
+
   homeComp.getForecast();
   homeComp.getWeather();
 }
