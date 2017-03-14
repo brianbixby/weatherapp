@@ -11,6 +11,15 @@ angular.module('App')
       };
       console.log("in service");
       return $http(req);
+    },
+    forecast: function() {
+      var URL = '/api/weather/forecast';
+      var req = {
+        url: URL,
+        method: "GET"
+      };
+      console.log("in service");
+      return $http(req);
     }
   };
 }]);

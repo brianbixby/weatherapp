@@ -12,10 +12,16 @@ function HomeCompCtrl($http, $state, $location, Weather) {
   homeComp.getWeather = function() {
     Weather.result().then(function(response) {
       homeComp.weather = response.data.current_observation;
-      console.log(homeComp.weather);
+      // console.log(response);
     });
   }
-
+  homeComp.getForecast = function() {
+    Weather.forecast().then(function(response) {
+      homeComp.forecast = response.data.forecast;
+      console.log(response);
+    });
+  }
+  homeComp.getForecast();
   homeComp.getWeather();
 }
 
