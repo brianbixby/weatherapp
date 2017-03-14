@@ -2,18 +2,9 @@
   <h1>Home </h1>
   <div>
     <P>{{homeComp.weather.UV}}</P>
-    <P>{{homeComp.weather.dewpoint_c}}</P>
-    <P>{{homeComp.weather.dewpoint_f}}</P>
-    <P>{{homeComp.weather.dewpoint_string}}</P>
-    <P>{{homeComp.weather.display_location.city}}</P>
-    <P>{{homeComp.weather.display_location.elevation}}</P>
-    <P>{{homeComp.weather.display_location.full}}</P>
-    <P>{{homeComp.weather.display_location.latitude}}</P>
-    <P>{{homeComp.weather.display_location.longitude}}</P>
-    <P>{{homeComp.weather.display_location.zip}}</P>
-    <P>{{homeComp.weather.feelslike_c}}</P>
-    <P>{{homeComp.weather.feelslike_f}}</P>
-    <P>{{homeComp.weather.feelslike_string}}</P>
+    <P>Celsius: {{homeComp.weather.dewpoint_c}}</P>
+    <P>Farenheit: {{homeComp.weather.dewpoint_f}}</P>
+
 
     <p>Observation Station:{{homeComp.weather.observation_location.full}}</p>
     <p>Observation Time:{{homeComp.weather.observation_time}}</p>
@@ -23,5 +14,39 @@
     <p>Visiblity (km):{{homeComp.weather.visibility_km}}</p>
     <p>Visiblity (mi): {{homeComp.weather.visibility_mi}}</p>
 
+    <P>City: {{homeComp.weather.display_location.city}}</P>
+    <P>Elevation: {{homeComp.weather.display_location.elevation}}</P>
+    <P>Location full: {{homeComp.weather.display_location.full}}</P>
+    <P>latitude: {{homeComp.weather.display_location.latitude}}</P>
+    <P>longitude: {{homeComp.weather.display_location.longitude}}</P>
+    <P>Zip: {{homeComp.weather.display_location.zip}}</P>
+    <P>Feels like celsius: {{homeComp.weather.feelslike_c}}</P>
+    <P>feels like farenheit: {{homeComp.weather.feelslike_f}}</P>
+    <P>feels like string: {{homeComp.weather.feelslike_string}}</P>
+    <P><a href="{{homeComp.weather.forecast_url}}">forecast url </a></P>
+    <P><a href="{{homeComp.weather.history_url}}">weather history url</a></P>
+    <P>current weather: {{homeComp.weather.icon}}</P>
+    <P><img src="{{homeComp.weather.icon_url}}"></P>
+    <P><a href="{{homeComp.weather.image.link}}">image link</a></P>
+    <P>{{homeComp.weather.image.title}}</P>
+    <P><img src="{{homeComp.weather.image.url}}"></P>
+    <P>Local time: {{homeComp.weather.local_time_rfc822}}</P>
+    <P>Time zone: {{homeComp.weather.local_tz_long}}</P>
+    <P><a href="{{homeComp.weather.ob_url}}"></a>unknown url</P>
+    <P>feels like string: {{homeComp.weather.feelslike_string}}</P>
+    <P>feels like c: {{homeComp.weather.feelslike_c}}</P>
+    <P>Feelslike f: {{homeComp.weather.feelslike_f}}</P>
+    <P>Feelslike string: {{homeComp.weather.feelslike_string}}</P>
+    <p>weather: {{homeComp.weather.weather}}</p>
+    <p>wind_degrees: {{homeComp.weather.wind_degrees}}</p>
+    <p>wind_dir: {{homeComp.weather.wind_dir}}</p>
+    <p>wind_gust_kph: {{homeComp.weather.wind_gust_kph}}</p>
+    <p>wind_gust_mph: {{homeComp.weather.wind_gust_mph}}</p>
+    <p>wind_kph: {{homeComp.weather.wind_kph}}</p>
+    <p>wind_mph: {{homeComp.weather.wind_mph}}</p>
+    <p>wind_string: {{homeComp.weather.wind_string}}</p>
+    <p>windchill_c: {{homeComp.weather.windchill_c}}</p>
+    <p>windchill_f: {{homeComp.weather.windchill_f}}</p>
+    <p>windchill_string: {{homeComp.weather.windchill_string}}</p>
   </div>
 </div>
