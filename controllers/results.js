@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
   console.log(req);
   var url = 'http://api.wunderground.com/api/' + key + '/conditions/q/CA/San_Francisco.json';
     request(url, function(error, response, body) {
-      res.send(response);
+      res.send(body);
       console.log("THIS IS BODY: ", body);
     });
   });
