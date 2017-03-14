@@ -11,7 +11,7 @@ function HomeCompCtrl($http, $state, $location, Weather) {
   //Returns current weather result for Seattle from API using service
   homeComp.getWeather = function() {
     Weather.result().then(function(response) {
-      homeComp.weather = response;
+      homeComp.weather = response.data.current_observation;
       console.log(homeComp.weather);
     });
   }
